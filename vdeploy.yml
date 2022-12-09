@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vertex-deploy
+  labels:
+    app: myvertexapp
+spec:
+  replicas: 3
+  selector:
+      matchLabels:
+         app: vertexrcapp
+  template:
+     metadata:
+       labels: 
+         app: vertexrcapp
+     spec:
+       containers:
+        - name: vertexrcapp-container
+          image:  nbktechnosys/myjavaimages2dec22:2
+          ports:
+            - containerPort: 8080

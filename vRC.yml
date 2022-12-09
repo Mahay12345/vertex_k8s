@@ -15,6 +15,6 @@ spec:
      spec:
         containers:
         - name: vertexrcapp-container
-          image: nbktechnosys/mahaLogin-5.0.war
+          image: nbktechnosys/myjavaimages2dec22:1
           ports: 
-          - containerPort: 80
+          - containerPort: 8080
